@@ -333,6 +333,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         loadProgress() {
+            // Check version to clear old data
+            const version = localStorage.getItem('ramadan_progress_version');
+            if (version !== '2.0') {
+                // Clear old progress data
+                localStorage.removeItem('ramadan_progress');
+                localStorage.setItem('ramadan_progress_version', '2.0');
+                return [];
+            }
+
             const saved = localStorage.getItem('ramadan_progress');
             return saved ? JSON.parse(saved) : [];
         }
