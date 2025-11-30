@@ -322,13 +322,14 @@ document.addEventListener('DOMContentLoaded', () => {
         constructor() {
             this.readSections = this.loadProgress();
             this.sectionObservers = new Map();
+            this.totalSections = 8; // We have 8 content sections (excluding home)
             this.init();
         }
 
         init() {
-            this.trackSections();
-            this.updateProgressUI();
             this.addProgressIndicator();
+            this.updateProgressUI();
+            this.trackSections();
         }
 
         loadProgress() {
@@ -344,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const progressObserverOptions = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.5
+                threshold: 0.3 // Lower threshold for better detection
             };
 
             sections.forEach(section => {
@@ -353,13 +354,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     const observer = new IntersectionObserver((entries) => {
                         entries.forEach(entry => {
                             if (entry.isIntersecting) {
+                                // Mark as read after viewing for 2 seconds
                                 setTimeout(() => {
-                                    if (!this.readSections.includes(sectionId)) {
+                                    if (entry.isIntersecting && !this.readSections.includes(sectionId)) {
                                         this.readSections.push(sectionId);
                                         this.saveProgress();
                                         this.updateProgressUI();
                                     }
-                                }, 3000); // Mark as read after 3 seconds
+                                }, 2000);
                             }
                         });
                     }, progressObserverOptions);
@@ -371,15 +373,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         updateProgressUI() {
-            const totalSections = sections.length - 1; // Exclude home
             const readCount = this.readSections.length;
-            const percentage = Math.round((readCount / totalSections) * 100);
+            const percentage = Math.round((readCount / this.totalSections) * 100);
 
             // Update progress indicator
             const progressIndicator = document.getElementById('progressIndicator');
             if (progressIndicator) {
                 progressIndicator.textContent = `${percentage}%`;
-                progressIndicator.title = `${readCount} of ${totalSections} sections read`;
+                progressIndicator.title = `${readCount} of ${this.totalSections} sections read`;
             }
         }
 
@@ -387,6 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const indicator = document.createElement('div');
             indicator.id = 'progressIndicator';
             indicator.className = 'progress-indicator';
+            indicator.textContent = '0%';
             indicator.title = 'Reading progress';
             document.body.appendChild(indicator);
         }
@@ -400,8 +402,8 @@ document.addEventListener('DOMContentLoaded', () => {
         getProgress() {
             return {
                 read: this.readSections.length,
-                total: sections.length - 1,
-                percentage: Math.round((this.readSections.length / (sections.length - 1)) * 100)
+                total: this.totalSections,
+                percentage: Math.round((this.readSections.length / this.totalSections) * 100)
             };
         }
     }
