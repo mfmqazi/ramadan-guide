@@ -81,6 +81,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 h3,
 h4,
 h5,
@@ -227,6 +228,11 @@ p {
 /* === HERO SECTION === */
 .hero {
   background: var(--gradient-hero);
+  background-image: url('Ramadan background.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
   position: relative;
   overflow: hidden;
 }
