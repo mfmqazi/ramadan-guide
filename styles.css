@@ -227,12 +227,10 @@ p {
 
 /* === HERO SECTION === */
 .hero {
-  background: var(--gradient-hero);
-  background-image: url('Ramadan background.avif');
+  background-image: url('ramadan-background.avif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-blend-mode: overlay;
   position: relative;
   overflow: hidden;
 }
@@ -244,10 +242,8 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image:
-    radial-gradient(circle at 20% 50%, rgba(107, 70, 193, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(13, 148, 136, 0.15) 0%, transparent 50%);
-  animation: pulse 8s ease-in-out infinite;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.75) 100%);
+  z-index: 0;
 }
 
 @keyframes pulse {
