@@ -68,10 +68,8 @@
         <!-- Table of Contents Overlay (Sidebar) -->
         <aside id="toc-container" class="toc-container">
             <h3 class="toc-title">Table of Contents</h3>
-            <div class="toc-book-cover">
-                <img src="book_cover.png" alt="Book Front Cover" class="toc-img">
-            </div>
             <ul class="toc-list">
+                <li><a href="#front-cover">Front Cover</a></li>
                 <li><a href="#preface">Preface</a></li>
                 <li><a href="#shahru-ramadan">Shahru Ramadan</a></li>
                 <li><a href="#marhaban-ramadan">Welcome Ramadan</a></li>
@@ -91,14 +89,18 @@
                 <li><a href="#laylatul-qadr">The Night of Decree</a></li>
                 <li><a href="#farewell-ramadan">Farewell Ramadan</a></li>
                 <li><a href="#eid-takbirat">Eid & Takbirat</a></li>
+                <li><a href="#back-cover">Back Cover</a></li>
             </ul>
-            <div class="toc-book-cover back">
-                <img src="book_back.png" alt="Book Back Cover" class="toc-img">
-            </div>
         </aside>
 
         <!-- Section: Full Guide Content -->
         <div id="full-guide" class="guide-wrapper">
+            <section id="front-cover" class="content-block animate-on-scroll"
+                style="text-align: center; padding: 2rem;">
+                <h2 style="justify-content: center;">Front Cover</h2>
+                <img src="book_cover.png" alt="Book Front Cover" class="cover-img">
+            </section>
+
             <section id="preface" class="content-block animate-on-scroll">
                 <h2>Preface</h2>
                 <div class="arabic-indo-pak" style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">
@@ -396,18 +398,38 @@
                     the month
                     with gratitude and a strong resolve to continue our good deeds.</p>
             </section>
-
             <section id="eid-takbirat" class="content-block animate-on-scroll">
                 <h2>Eid al-Fitr & Takbirat</h2>
                 <p>A day of celebration and gratitude to Allah for the success of completing the fast.</p>
                 <div class="dua-card">
                     <p class="section-subtitle">Takbirat of Eid:</p>
-                    <span class="arabic-indo-pak" style="font-size: 2rem;">اَللهُ اَکْبَرُ اَللهُ اَکْبَرُ لَا اِلٰهَ
-                        اِلَّا اللهُ
-                        وَاللهُ اَکْبَرُ اَللهُ اَکْبَرُ وَلِلّٰهِ الْحَمْدُ</span>
-                    <p class="translation">"Allah is the Greatest, Allah is the Greatest. There is no deity but Allah.
-                        Allah is the
-                        Greatest, Allah is the Greatest, and all praises are for Allah."</p>
+                    <span class="arabic-indo-pak"
+                        style="font-size: 2.22rem; color: var(--color-accent); display: block; text-align: center;">اَللهُ
+                        اَکْبَرُ اَللهُ اَکْبَرُ لَا اِلٰهَ اِلَّا اللهُ وَاللهُ اَکْبَرُ اَللهُ اَکْبَرُ وَلِلّٰهِ
+                        الْحَمْدُ</span>
+                    <p class="translation" style="text-align: center; margin-top: 1rem;">"Allah is the Greatest, Allah
+                        is the Greatest. There is no deity but Allah. Allah is the Greatest, Allah is the Greatest, and
+                        all praises are for Allah."</p>
                 </div>
             </section>
-            >
+
+            <section id="back-cover" class="content-block animate-on-scroll" style="text-align: center; padding: 2rem;">
+                <h2 style="justify-content: center;">Back Cover</h2>
+                <img src="book_back.png" alt="Book Back Cover" class="cover-img">
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">Based on <strong>"The Month of Ramadan"</strong> by Dr. Farhat Hashmi</p>
+                <p class="footer-text">May Allah accept our fasts, prayers, and good deeds. Ameen.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
