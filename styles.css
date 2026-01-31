@@ -1042,6 +1042,31 @@ p {
   border-bottom: 2px solid rgba(251, 191, 36, 0.2);
 }
 
+.toc-book-cover {
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: var(--transition-normal);
+}
+
+.toc-book-cover.back {
+  margin-top: var(--spacing-md);
+  margin-bottom: 0;
+}
+
+.toc-book-cover:hover {
+  transform: scale(1.02);
+  border-color: var(--color-accent);
+}
+
+.toc-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .toc-list {
   list-style: none;
   padding: 0;
