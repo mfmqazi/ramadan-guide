@@ -4,25 +4,10 @@
    =================================== */
 
 /* === IMPORTS === */
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap');
 
 /* === CSS VARIABLES === */
 :root {
-  /* Color Palette - Islamic Inspired */
-  --color-primary: #6B46C1;
-  /* Deep Purple */
-  --color-primary-light: #9F7AEA;
-  /* Light Purple */
-  --color-primary-dark: #553C9A;
-  /* Darker Purple */
-  --color-secondary: #0D9488;
-  /* Teal */
-  --color-secondary-light: #14B8A6;
-  /* Light Teal */
-  --color-accent: #F59E0B;
-  /* Gold */
-  --color-accent-light: #FCD34D;
-  /* Light Gold */
 
   /* Neutrals */
   --color-bg-dark: #0F172A;
@@ -73,6 +58,32 @@
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
+}
+
+.arabic-indo-pak {
+  font-family: 'Scheherazade New', serif;
+  font-size: 2rem;
+  line-height: 2.2;
+  text-align: right;
+  direction: rtl;
+  color: var(--color-accent);
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-md);
+  background: rgba(245, 158, 11, 0.05);
+  border-radius: var(--radius-md);
+  display: block;
+}
+
+.dua-container {
+  margin: var(--spacing-xl) 0;
+  border-left: 4px solid var(--color-accent);
+  padding-left: var(--spacing-lg);
+}
+
+.dua-translation {
+  font-style: italic;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
 }
 
 /* === RESET & BASE === */
