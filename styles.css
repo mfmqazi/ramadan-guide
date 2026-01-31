@@ -10,6 +10,15 @@
 
 /* === CSS VARIABLES === */
 :root {
+  /* Colors */
+  --color-primary: #6B46C1;
+  /* Elegant Purple */
+  --color-secondary: #0D9488;
+  /* Teal */
+  --color-accent: #FBBF24;
+  /* Golden Yellow */
+  --color-accent-light: #FDE68A;
+  /* Light Gold */
 
   /* Neutrals */
   --color-bg-dark: #0F172A;
@@ -32,8 +41,10 @@
   --gradient-accent: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
 
   /* Typography */
-  --font-heading: 'Amiri', serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Amiri',
+    serif;
+  --font-body: 'Inter',
+    sans-serif;
 
   /* Spacing */
   --spacing-xs: 0.5rem;
