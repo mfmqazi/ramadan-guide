@@ -4,7 +4,7 @@
    =================================== */
 
 /* === IMPORTS === */
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
 
 /* === CSS VARIABLES === */
 :root {
@@ -61,10 +61,11 @@
 }
 
 .arabic-indo-pak {
-  font-family: 'Scheherazade New', serif;
-  font-size: 2.8rem;
-  /* Reduced to Medium */
-  line-height: 1.6;
+  font-family: 'Noto Nastaliq Urdu', serif;
+  font-size: 2.2rem;
+  /* Reduced further to Medium-Small */
+  line-height: 2.5;
+  /* Nastaliq needs more line height for overlapping ascenders/descenders */
   text-align: right;
   direction: rtl;
   color: #FFD700;
@@ -73,9 +74,8 @@
   padding: var(--spacing-sm);
   background: transparent;
   display: block;
-  text-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-  /* Slightly softer glow */
-  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  font-weight: 500;
 }
 
 .dua-container {
