@@ -1,10 +1,12 @@
-/* ===================================
-   RAMADAN WEBSITE - DESIGN SYSTEM
-   Based on "The Month of Ramadan" by Dr. Farhat Hashmi
-   =================================== */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
 
-/* === IMPORTS === */
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+@font-face {
+  font-family: 'IndoPak-Naskh';
+  src: url('IndoPak-Naskh.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* === CSS VARIABLES === */
 :root {
@@ -61,21 +63,20 @@
 }
 
 .arabic-indo-pak {
-  font-family: 'Noto Nastaliq Urdu', serif;
-  font-size: 2.2rem;
-  /* Reduced further to Medium-Small */
-  line-height: 2.5;
-  /* Nastaliq needs more line height for overlapping ascenders/descenders */
+  font-family: 'IndoPak-Naskh', serif;
+  font-size: 1.8rem;
+  /* Medium size as requested */
+  line-height: 2.2;
   text-align: right;
   direction: rtl;
   color: #FFD700;
   /* Vibrant Golden Yellow */
-  margin: 0.5rem 0 1.5rem 0;
+  margin: 0.2rem 0 1rem 0;
   padding: var(--spacing-sm);
   background: transparent;
   display: block;
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
-  font-weight: 500;
+  font-weight: normal;
 }
 
 .dua-container {
