@@ -456,3 +456,48 @@ window.ramadanWebsite = {
     scrollToElement,
     getCurrentSection
 };
+
+// === TOC ACTIVE HIGHLIGHTING ===
+document.addEventListener('DOMContentLoaded', () => {
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const contentBlocks = document.querySelectorAll('.content-block');
+
+    const tocObserverOptions = {
+        root: null,
+        rootMargin: '-20% 0px -70% 0px',
+        threshold: 0
+    };
+
+    const tocObserverCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const blockId = entry.target.getAttribute('id');
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + blockId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    };
+
+    const tocObserver = new IntersectionObserver(tocObserverCallback, tocObserverOptions);
+    contentBlocks.forEach(block => tocObserver.observe(block));
+
+    // Smooth scroll for TOC links
+    tocLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const offsetTop = targetElement.offsetTop - 100;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
