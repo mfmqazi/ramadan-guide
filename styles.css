@@ -62,16 +62,22 @@
 
 .arabic-indo-pak {
   font-family: 'Scheherazade New', serif;
-  font-size: 2rem;
-  line-height: 2.2;
+  font-size: 3rem;
+  /* Significantly larger */
+  line-height: 1.8;
   text-align: right;
   direction: rtl;
-  color: var(--color-accent);
-  margin: var(--spacing-md) 0;
+  color: #FCD34D;
+  /* Bright Radiant Gold */
+  margin: var(--spacing-lg) 0;
   padding: var(--spacing-md);
-  background: rgba(245, 158, 11, 0.05);
+  background: rgba(252, 211, 77, 0.05);
+  /* Subtle gold tint */
   border-radius: var(--radius-md);
   display: block;
+  text-shadow: 0 0 15px rgba(252, 211, 77, 0.2);
+  /* Soft glow */
+  letter-spacing: normal;
 }
 
 .dua-container {
