@@ -243,12 +243,19 @@ p {
 
 /* === HERO SECTION === */
 .hero {
+  background-color: var(--color-bg-darker);
   background-image: url('ramadan-background.avif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   overflow: hidden;
+  padding: var(--spacing-3xl) 0;
 }
 
 .hero::before {
@@ -258,8 +265,8 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.75) 100%);
-  z-index: 0;
+  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.5) 0%, rgba(15, 23, 42, 0.95) 100%);
+  z-index: 1;
 }
 
 @keyframes pulse {
@@ -276,24 +283,29 @@ p {
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  /* Must be above ::before overlay */
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
+  padding: 0 var(--spacing-md);
 }
 
 .hero-subtitle {
-  font-size: 1.3rem;
-  color: var(--color-secondary-light);
-  margin-bottom: var(--spacing-md);
-  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .hero-description {
-  font-size: 1.2rem;
-  color: var(--color-text-muted);
+  font-size: 1.3rem;
+  color: var(--color-text-secondary);
   max-width: 700px;
   margin: 0 auto var(--spacing-xl);
+  line-height: 1.6;
 }
 
 .hero-cta {
