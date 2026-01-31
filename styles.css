@@ -146,6 +146,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  scroll-margin-top: 100px;
+  /* Offset for fixed navbar */
 }
 
 /* === NAVIGATION === */
@@ -1005,6 +1007,7 @@ p {
     padding: var(--spacing-xs) var(--spacing-sm);
   }
 }
+
 /* --- COMPREHENSIVE GUIDE LAYOUT --- */
 .main-content {
   display: flex;
@@ -1079,6 +1082,8 @@ p {
   margin-bottom: var(--spacing-xl);
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: var(--shadow-lg);
+  scroll-margin-top: 100px;
+  /* Offset for fixed navbar */
 }
 
 .content-block h2 {
@@ -1163,6 +1168,7 @@ p {
   .main-content {
     flex-direction: column;
   }
+
   .toc-container {
     position: static;
     height: auto;

@@ -428,7 +428,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function scrollToElement(elementId) {
     const element = document.getElementById(elementId);
     if (element) {
-        const offsetTop = element.offsetTop - 70;
+        const absoluteTop = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetTop = absoluteTop - 70; // Basic offset for global sections
         window.scrollTo({
             top: offsetTop,
             behavior: 'smooth'
@@ -492,7 +493,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetId = link.getAttribute('href');
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 100;
+                // Get absolute position relative to document
+                const absoluteTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const offsetTop = absoluteTop - 100;
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
