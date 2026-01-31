@@ -828,33 +828,7 @@ p {
   }
 }
 
-/* ===================================
-   PROGRESS INDICATOR
-   =================================== */
-.progress-indicator {
-  position: fixed;
-  bottom: var(--spacing-lg);
-  right: var(--spacing-lg);
-  background: var(--gradient-accent);
-  color: var(--color-bg-dark);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1rem;
-  box-shadow: var(--shadow-lg);
-  z-index: 999;
-  cursor: pointer;
-  transition: var(--transition-normal);
-}
 
-.progress-indicator:hover {
-  transform: scale(1.1);
-  box-shadow: var(--shadow-glow);
-}
 
 /* ===================================
    SEARCH BUTTON IN NAV
@@ -895,7 +869,6 @@ p {
   .navbar,
   .scroll-progress,
   .bookmark-btn,
-  .progress-indicator,
   .search-modal,
   .menu-toggle,
   .hero-cta,
@@ -992,14 +965,6 @@ p {
   .search-modal-content {
     width: 95%;
     max-height: 80vh;
-  }
-
-  .progress-indicator {
-    bottom: var(--spacing-md);
-    right: var(--spacing-md);
-    width: 50px;
-    height: 50px;
-    font-size: 0.9rem;
   }
 
   .share-section {
