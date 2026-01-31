@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
 
 @font-face {
-  font-family: 'UthmanicHafs';
-  src: url('UthmanicHafs.ttf') format('truetype');
+  font-family: 'IndoPak-QWBW';
+  src: url('IndoPak-QWBW.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -63,7 +63,7 @@
 }
 
 .arabic-indo-pak {
-  font-family: 'UthmanicHafs', serif;
+  font-family: 'IndoPak-QWBW', serif;
   font-size: 1.8rem;
   /* Medium size */
   line-height: 2.2;
