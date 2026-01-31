@@ -57,8 +57,10 @@
                     </p>
                 </div>
                 <div class="hero-cta" style="margin-top: var(--spacing-xl);">
-                    <a href="#front-cover" class="btn btn-primary"
-                        style="background: var(--gradient-accent); color: var(--color-bg-dark); padding: 1rem 2.5rem; border-radius: var(--radius-md); text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: var(--shadow-lg); transition: var(--transition-normal); display: inline-block;">📖
+                    <a href="#front-cover"
+                        onclick="event.preventDefault(); document.getElementById('front-cover').scrollIntoView({behavior: 'smooth', block: 'start'});"
+                        class="btn btn-primary"
+                        style="background: var(--gradient-accent); color: var(--color-bg-dark); padding: 1rem 2.5rem; border-radius: var(--radius-md); text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: var(--shadow-lg); transition: var(--transition-normal); display: inline-block; cursor: pointer;">📖
                         Read the Book by Dr. Farhat Hashmi</a>
                 </div>
             </div>
