@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // === SMOOTH SCROLL TO TOP ===
+    // === SMOOTH SCROLL FOR HERO BUTTONS ===
     const heroButtons = document.querySelectorAll('.hero-cta .btn');
     heroButtons.forEach(button => {
         button.addEventListener('click', (e) => {
@@ -150,7 +150,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetSection = document.querySelector(targetId);
 
             if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 70;
+                // Use absolute positioning for accurate scrolling
+                const absoluteTop = targetSection.getBoundingClientRect().top + window.pageYOffset;
+                const offsetTop = absoluteTop - 100;
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
